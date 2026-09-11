@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+}
 
 .swiper-button-next,
 .swiper-button-prev {
@@ -6,9 +11,4 @@
   height: 15px !important;
   color:rgb(61, 60, 60) !important;
  
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 18px;
 }
