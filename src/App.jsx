@@ -5,6 +5,7 @@ import Nav from "./Components/Nav"
 import Crousel from "./Components/Crousel"
 import PriceTags from "./Components/PriceTags"
 import Trending from "./Components/Trending"
+import Footer from "./Components/footer"
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Crousel/>
         <PriceTags/>
         <Trending/>
+        <Footer/>
       </div>
     </>
   )

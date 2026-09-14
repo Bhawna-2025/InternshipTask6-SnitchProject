@@ -20,8 +20,6 @@ const Category = () => {
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                 slidesPerView={5}
 
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
                 loop={true}
                 autoplay={{
                     delay: 2000,
