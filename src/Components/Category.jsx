@@ -10,9 +10,9 @@ const Category = () => {
     return (
         <>
 
-            <div className='mt-5 pl-20'>
-                <p className='text-4xl font-[200]'>SHOP BY</p>
-                <p className='text-4xl font-bold'>CATEGORY</p>
+            <div className='mt-5 md:pl-20'>
+                <p className='md:text-4xl text-2xl font-[200]'>SHOP BY</p>
+                <p className='md:text-4xl text-2xl font-bold'>CATEGORY</p>
                 <div className="h-[3px] w-80 bg-amber-600 mt-3"></div>
             </div>
 
@@ -66,7 +66,7 @@ const Category = () => {
 
             </Swiper>
 
-            <a href="#" className='inline-block text-sm pl-15 underline'>SHOP ALL</a>
+            <a href="#" className='inline-block text-sm md:pl-15 pl-5 underline'>SHOP ALL</a>
 
 
         </>

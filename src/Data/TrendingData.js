@@ -301,4 +301,148 @@ const JeansData = [
   },
 ]
 
-export { ShirtData, JeansData };
+const TshirtData = [
+  {
+    id: 1,
+    category: "T-shirts",
+    name: "Contrast Tipping Technical Polo T-Shirt",
+    price: 1599,
+    size: ['S', 'M', 'L', 'XL', 'XXL'],
+    images: [
+      "/TshirtImages/Tshirt1/image1.webp",
+      "/TshirtImages/Tshirt1/image2.webp",
+      "/TshirtImages/Tshirt1/image3.jpg",
+      "/TshirtImages/Tshirt1/image4.webp",
+      "/TshirtImages/Tshirt1/immage5.webp",
+    ]
+  },
+  {
+    id: 2,
+    category: "T-shirts",
+    name: "Contrast Tipping Technical Polo T-Shirt",
+    price: 1599,
+    size: ['S', 'M', 'L', 'XL', 'XXL'],
+    images: [
+      "/TshirtImages/Tshirt2/image1.webp",
+      "/TshirtImages/Tshirt2/image2.webp",
+      "/TshirtImages/Tshirt2/image3.webp",
+      "/TshirtImages/Tshirt2/image4.webp",
+      "/TshirtImages/Tshirt2/image5.webp",
+    ]
+  },
+  {
+    id: 3,
+    category: "T-shirts",
+    name: "Contrast Tipping Technical Polo T-Shirt",
+    price: 1599,
+    size: ['S', 'M', 'L', 'XL'],
+    images: [
+      "/TshirtImages/Tshirt3/image1.webp",
+      "/TshirtImages/Tshirt3/image2.webp",
+      "/TshirtImages/Tshirt3/image3.webp",
+      "/TshirtImages/Tshirt3/image4.webp",
+      "/TshirtImages/Tshirt3/image5.webp",
+    ]
+  },
+  {
+    id: 4,
+    category: "T-shirts",
+    name: "Contrast Tipping Technical Polo T-Shirt",
+    price: 1599,
+    size: ['S', 'M', 'L', 'XL'],
+    images: [
+      "/TshirtImages/Tshirt4/image1.webp",
+      "/TshirtImages/Tshirt4/image2.webp",
+      "/TshirtImages/Tshirt4/image3.webp",
+      "/TshirtImages/Tshirt4/image4.webp",
+      "/TshirtImages/Tshirt4/image5.webp",
+    ]
+  },
+  {
+    id: 5,
+    category: "T-shirts",
+    name: "Contrast Tipping Technical Polo T-Shirt",
+    price:  1599,
+    size: ['S', 'M', 'L', 'XL', 'XXL'],
+    images: [
+      "/TshirtImages/Tshirt5/image1.webp",
+      "/TshirtImages/Tshirt5/image2.webp",
+      "/TshirtImages/Tshirt5/image3.webp",
+      "/TshirtImages/Tshirt5/image4.webp",
+      "/TshirtImages/Tshirt5/image5.webp",
+    ]
+  },
+  {
+    id: 6,
+    category: "T-shirts",
+    name: "Flat Knit Stripes Zipper Polo T-Shirt",
+    price: 1499,
+    size: ['S', 'M', 'L', 'XL'],
+    images: [
+      "/TshirtImages/Tshirt6/image1.webp",
+      "/TshirtImages/Tshirt6/image2.webp",
+      "/TshirtImages/Tshirt6/image3.webp",
+      "/TshirtImages/Tshirt6/image4.webp",
+      "/TshirtImages/Tshirt6/iamge5.webp",
+    ]
+  },
+  {
+    id: 7,
+    category: "T-shirts",
+    name: "Good Times Roll Cropped T-Shirt",
+    price: 1199,
+    size: ['S', 'M', 'L', 'XL'],
+    images: [
+      "/TshirtImages/Tshirt7/image1.webp",
+      "/TshirtImages/Tshirt7/image2.webp",
+      "/TshirtImages/Tshirt7/image3.webp",
+      "/TshirtImages/Tshirt7/image4.webp",
+      "/TshirtImages/Tshirt7/image5.webp",
+    ]
+  },
+  {
+    id: 8,
+    category: "T-shirts",
+    name: "Rebel Bunny Oversized T-Shirt",
+    price: 1199,
+    size: ['S', 'M', 'L', 'XL', 'XXL'],
+    images: [
+      "/TshirtImages/Tshirt8/image1.webp",
+      "/TshirtImages/Tshirt8/image2.webp",
+      "/TshirtImages/Tshirt8/image3.webp",
+      "/TshirtImages/Tshirt8/image4.webp",
+      "/TshirtImages/Tshirt8/image5.webp",
+    ]
+  },
+  {
+    id: 9,
+    category: "T-shirts",
+    name: "Gameday Tour Sleeveles T-Shirt",
+    price: 1099,
+    size: ['S', 'M', 'L', 'XL'],
+    images: [
+      "/TshirtImages/Tshirt9/image1.webp",
+      "/TshirtImages/Tshirt9/image2.webp",
+      "/TshirtImages/Tshirt9/image3.webp",
+      "/TshirtImages/Tshirt9/image4.webp",
+      "/TshirtImages/Tshirt9/image5.webp",
+    ]
+  },
+  {
+    id: 10,
+    category: "T-shirts",
+    name: "Silver Green Oversized T-Shirt",
+    price: 999,
+    size: ['S', 'M', 'L', 'XL', 'XXL'],
+    images: [
+      "/TshirtImages/Tshirt10/image1.webp",
+      "/TshirtImages/Tshirt10/image2.webp",
+      "/TshirtImages/Tshirt10/image3.webp",
+      "/TshirtImages/Tshirt10/image4.webp",
+      "/TshirtImages/Tshirt10/image5.webp",
+    ]
+  },
+]
+
+export { ShirtData, JeansData ,TshirtData};
+

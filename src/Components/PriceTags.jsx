@@ -41,11 +41,17 @@ const priceItems = [
 
 const PriceTags = () => {
   return (
-    <div className="bg-[url('/priceBanner.jpeg')] bg-cover bg-center bg-no-repeat h-[80vh] w-full my-10 flex items-end pb-12 px-8">
+    <div className="bg-[url('/priceBanner.jpeg')] bg-cover bg-center bg-no-repeat md:h-[80vh] h-[30vh] w-full md:my-10 my-5 flex items-end md:pb-12 pb-6 md:px-8 px-4">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-        slidesPerView={3}
-        spaceBetween={24}
+        slidesPerView={1}
+        spaceBetween={16}
+        breakpoints={{
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+          },
+        }}
         loop={true}
         autoplay={{
           delay: 2500,
@@ -56,7 +62,7 @@ const PriceTags = () => {
       >
         {priceItems.map((item, index) => (
           <SwiperSlide key={index}>
-            <a href="#" className="flex h-30 w-full overflow-hidden shadow-md group">
+            <a href="#" className="flex md:h-30 h-20 w-full overflow-hidden shadow-md group">
               {/* Left Side: Black Product Box */}
               <div className="bg-black w-[45%] h-full flex items-center justify-center p-1">
                 <img
@@ -67,13 +73,13 @@ const PriceTags = () => {
               </div>
 
               {/* Right Side: Grey Offer Banner with Blurry Glassmorphism Effect */}
-              <div className="bg-[#a2a2a2]/50 backdrop-blur-md w-[55%] h-full flex flex-col justify-center px-4 py-3 text-white">
-                <p className="text-base font-300  uppercase leading-tight mb-1">
+              <div className="bg-[#a2a2a2]/50 backdrop-blur-md w-[55%] h-full flex flex-col justify-center px-3 md:px-4 py-2 md:py-3 text-white">
+                <p className="md:text-base text-xs font-300 uppercase leading-tight mb-1">
                   {item.title}
                 </p>
-                <p className="text-sm font-300 tracking-wide flex items-baseline gap-1.5">
+                <p className="md:text-sm text-xs font-300 tracking-wide flex items-baseline gap-1.5">
                   <span>AT</span>
-                  <span className="text-2xl font-500 underline underline-offset-4 decoration-2">
+                  <span className="md:text-2xl text-base font-500 underline underline-offset-4 decoration-2">
                     {item.price}
                   </span>
                 </p>

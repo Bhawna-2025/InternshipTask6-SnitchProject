@@ -18,7 +18,7 @@ const Banner = () => {
     
       }}
       speed={1000}
-      className='h-[90vh] w-full mt-20'
+      className='md:h-[90vh] h-[30vh] w-full mt-20'
     >
       <SwiperSlide className='h-full w-full' ><img src="/BannerImages/banner1Image.jpeg" alt="" className='h-full w-full object-cover' /></SwiperSlide>
       <SwiperSlide><img src="/BannerImages/banner2Image.jpeg" alt="" className='h-full w-full object-cover ' /></SwiperSlide>

@@ -11,12 +11,12 @@ const App = () => {
   return (
     <>
       <Nav/>
-      <div className="mx-30">
+      <div className="md:mx-30 mx-5">
         <Banner/>
         <Category/>
         <AdBanner/>
         <Crousel/>
-        <PriceTags/>
+        {/* <PriceTags/> */}
         <Trending/>
         <Footer/>
       </div>

@@ -1,4 +1,5 @@
-import { ShirtData, JeansData } from "../Data/TrendingData.js";
+import Product from "./Product";
+import { ShirtData, JeansData ,TshirtData } from "../Data/TrendingData.js";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -15,7 +16,9 @@ import "swiper/css/scrollbar";
 
 const Trending = () => {
   const [category, setCategory] = useState("All");
-  const allData = [...ShirtData, ...JeansData];
+  const [product, setProduct] = useState(false);
+const [selectedSizes, setSelectedSizes] = useState({});
+  const allData = [...ShirtData, ...JeansData, ...TshirtData];
   const filterData =
     category === "All"
       ? allData
@@ -23,7 +26,7 @@ const Trending = () => {
 
   return (
     <>
-      <div className="w-full pb-10">
+      <div className="w-full pb-10 ">
         <h1 className="text-3xl font-bold uppercase">Trending</h1>
         <div className="flex justify-start items-center uppercase gap-5 text-[12px]  mt-3">
           <a
@@ -107,18 +110,21 @@ const Trending = () => {
             key={item.id}
             onClick={(e) => {
               e.preventDefault();
+             
+             
             }}
           >
-            <div className="w-full">
+            <div className="w-full group">
               
               <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                 slidesPerView={1}
                 navigation
-                className=" w-full  overflow-hidden"
+                loop={true}
+                className=" w-full  overflow-hidden trending-swiper"
               >
                 {item.images.map((img, index) => (
-                  <SwiperSlide className="h-full w-full" key={index}>
+                  <SwiperSlide className="h-full w-full" key={index} id="SlideImage">
                     <img src={img} alt={item.name} />
                   </SwiperSlide>
                 ))}
@@ -130,30 +136,38 @@ const Trending = () => {
 
                 <p className="text-[12px] font-bold">₹{item.price}</p>
 
-                <div className="flex justify-between items-end">
+                
                   <div className="flex inline-flex border border-gray-300 divide-x divide-gray-300 text-xs text-gray-700 mt-2">
                     {(Array.isArray(item.size) ? item.size : [item.size]).map(
                       (sz, index) => (
                         <span
                           key={index}
-                          className="px-2 py-1 text-center font-medium cursor-pointer"
+                          className={`px-2 py-1 text-center font-medium cursor-pointer ${selectedSizes[item.id] === sz ? 'bg-gray-200 text-black' : ''}`}
+
+                          onClick={(e)=>{
+                            e.preventDefault();
+                            setSelectedSizes((prev) => ({ ...prev, [item.id]: sz }));
+                            
+                          }}
                         >
                           {sz}
                         </span>
                       ),
                     )}
                   </div>
-                  <div>
-                    <i className="ri-whatsapp-line text-lg pr-1"></i>
+                  <div className="my-2 flex items-center gap-2" >
+                    <i className="ri-whatsapp-line text-lg  text-[#25D366] "></i>
+                    <span className="text-[11px] text-gray-500 hover:text-[#25D366] cursor-pointer" onClick={()=>setProduct(item)}>Message us if you want to buy</span>
                   </div>
-                </div>
-
+            
               </div>
 
             </div>
           </a>
         ))}
       </div>
+
+      {product && <Product product={product} setProduct={setProduct} size={selectedSizes[product.id]} />}
 
     </>
   );
