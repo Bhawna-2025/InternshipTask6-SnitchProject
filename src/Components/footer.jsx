@@ -1,4 +1,3 @@
-import React from "react";
 
 const Footer = () => {
   return (
@@ -7,7 +6,7 @@ const Footer = () => {
 
       <div>
         <h2 className="font-bold text-xs uppercase mb-2">TOP CATEGORIES</h2>
-        <div className="grid grid-cols-7 gap-4 mt-2">
+        <div className="grid md:grid-cols-7 grid-cols-2 gap-4 mt-2">
           <div>
             <a href="#">
               <p className="text-[12px] text-gray-800">T-shirts</p>
@@ -105,7 +104,7 @@ const Footer = () => {
 
       <div>
         <h2 className="font-bold text-xs uppercase mb-2">POPULAR SEARCHES</h2>
-        <div className="grid grid-cols-7 gap-4 mt-2">
+        <div className="grid md:grid-cols-7 grid-cols-2 gap-4 mt-2">
           <div>
             <a href="#">
               <p className="text-[12px] text-gray-800">shirts for men</p>
@@ -250,7 +249,7 @@ const Footer = () => {
         <h2 className="font-bold text-xs uppercase mb-2">
           MOST POPULAR ACCESSORIES
         </h2>
-        <div className="grid grid-cols-4 gap-4 mt-2">
+        <div className="grid md:grid-cols-4 gap-4 mt-2">
           <div>
             <a href="#">
               <p className="text-[12px] text-gray-800">
@@ -380,14 +379,63 @@ const Footer = () => {
           Whether you're shopping online or visiting our immersive retail
           spaces, we ensure a smooth, stylish, and hassle-free journey that
           caters to today's fashion-forward men.
-          <br/>
-            Our direct-to-consumer (D2C)
+          <br />
+          Our direct-to-consumer (D2C)
           approach eliminates traditional retail barriers, giving you complete
           control over how and where you engage with our trend-driven menswear
           collections. From effortless online browsing to hands-on in-store
           exploration, SNITCH lets you shop on your terms, at your pace.
         </p>
       </div>
+
+      <div>
+
+        <h2 className="font-bold text-xs uppercase mb-2">
+          Company
+        </h2>
+        <div className="flex md:flex-row flex-col md:justify-between md:items-center md:gap-15 gap-5">
+
+          <div className="flex md:flex-row flex-col md:justify-center md:items-center md:gap-10 gap-4">
+            
+            <a href="#">
+              <p className="text-[12px] text-gray-800">
+                About Us
+              </p>
+            </a>
+
+            <a href="#">
+              <p className="text-[12px] text-gray-800">
+                Privacy Policy
+              </p>
+            </a>
+
+            <a href="#">
+              <p className="text-[12px] text-gray-800">
+                Terms & Conditions
+              </p>
+            </a>
+
+            <a href="#">
+              <p className="text-[12px] text-gray-800">
+                Return & Exchange Policy
+              </p>
+            </a>
+
+            <a href="#">
+              <p className="text-[12px] text-gray-800">
+                Contact Us
+              </p>
+            </a>
+          </div>
+
+          <div>
+            <a href="#"><i class="ri-instagram-line text-2xl"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   );
 };

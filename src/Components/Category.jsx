@@ -66,7 +66,7 @@ const Category = () => {
 
             </Swiper>
 
-            <a href="#" className='inline-block text-sm md:pl-15 pl-5 underline'>SHOP ALL</a>
+            <a href="#" className='inline-block md:text-sm text-xs md:pl-15 pl-5 underline'>SHOP ALL</a>
 
 
         </>

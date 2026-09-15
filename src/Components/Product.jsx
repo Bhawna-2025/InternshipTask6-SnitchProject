@@ -10,19 +10,24 @@ const Product = ({ product, setProduct, size }) => {
         className="md:h-[600px] md:w-[900px] rounded-lg  bg-white overflow-hidden animate-popup-card"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex md:flex-row flex-col md:gap-8 ">
-          <div className="flex flex-col gap-3">
-            <div className="md:h-[700px] md:w-[350px] ">
+        <div className="flex md:flex-row flex-col md:gap-8  ">
+
+          {/* image section */}
+          <div className="flex flex-col gap-3 ">
+            <div className="md:h-[700px] h-[400px]  md:w-[350px]  ">
               <img
                 src={product.images[0]}
                 alt={product.name}
-                className="h-[100%] w-[100%] object-cover"
+                className="md:h-[100%] h-[100%] w-[100%]  md:object-cover object-contain"
               />
             </div>
           </div>
-          <div className="flex flex-col md:gap-15 py-5 md:pr-10 pr-3 text-start">
+
+          {/* product details section */}
+          <div className="flex flex-col md:gap-15 md:py-5 py-10 md:pr-10 pr-15 text-start ">
+            {/* close button */}
             <div
-              className="w-fit cursor-pointer ml-115"
+              className="w-fit cursor-pointer md:ml-115 ml-84"
               onClick={() => {
                 setProduct(null);
               }}
@@ -30,19 +35,22 @@ const Product = ({ product, setProduct, size }) => {
               <X />
             </div>
             <div className="flex flex-col gap-2 md:px-0 px-5">
-              <h2 className="text-[30px] text-[#000]">{product.name}</h2>
-              <h3 className="text-[18px] text-[#000] font-bold">
+              <h2 className="md:text-[30px] text-[18px] text-black">
+                {product.name}
+              </h2>
+              <h3 className="md:text-[18px] text-black font-bold">
                 ₹{product.price}
               </h3>
-              <p className="text-[16px] text-[#000]">{product.category}</p>
-              <p className="text-[16px] text-[#000]">Size: {size}</p>
+              <p className="md:text-[16px] text-black">{product.category}</p>
+              <p className="md:text-[16px] text-black">Size: {size}</p>
               <div className="border border-gray-300 rounded-full w-fit py-2  px-3 hover:bg-[#25D366] hover:text-white cursor-pointer transition-all flex gap-2 items-center group">
-                <i className="ri-whatsapp-line text-lg  text-[#25D366] group-hover:text-white "></i>
-                <a href="wa" >Send us message</a>
+                <i className="ri-whatsapp-line md:text-lg text-sm  text-[#25D366] group-hover:text-white "></i>
+                <a href="wa">Send us message</a>
                 <i class="ri-arrow-right-up-line pl-1 group-hover:text-white"></i>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

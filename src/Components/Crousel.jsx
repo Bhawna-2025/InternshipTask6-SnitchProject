@@ -48,7 +48,7 @@ const Crousel = () => {
                     disableOnInteraction: false,
                 }}
                 speed={800}
-                className="md:h-[80vh] h-[25vh] w-full md:mt-2 md:mb-20 overflow-hidden"
+                className="md:h-[80vh] h-[25vh] w-full md:mt-2 md:mb-20 mb-5 overflow-hidden"
             >
                 {sliderData.map((item) => (
                     <SwiperSlide className="h-full w-full">
