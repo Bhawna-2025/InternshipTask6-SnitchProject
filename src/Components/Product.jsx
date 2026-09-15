@@ -1,6 +1,24 @@
 import { X } from "lucide-react";
 
 const Product = ({ product, setProduct, size }) => {
+  const whatsappNumber = "918397818419";
+
+  const sendToWhatsApp = () => {
+    const message = `Hi, I'm interested in this product: 
+    Product: ${product.name} 
+    Price: ₹${product.price}
+    Category: ${product.category} 
+    Selected Size: ${size} 
+    Please share more details.`;
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
+  };
+
+
   return (
     <section
       className="fixed inset-0 flex backdrop-blur-xl justify-center items-center z-100 bg-black/50 animate-backdrop"
@@ -43,11 +61,18 @@ const Product = ({ product, setProduct, size }) => {
               </h3>
               <p className="md:text-[16px] text-black">{product.category}</p>
               <p className="md:text-[16px] text-black">Size: {size}</p>
-              <div className="border border-gray-300 rounded-full w-fit py-2  px-3 hover:bg-[#25D366] hover:text-white cursor-pointer transition-all flex gap-2 items-center group">
-                <i className="ri-whatsapp-line md:text-lg text-sm  text-[#25D366] group-hover:text-white "></i>
-                <a href="wa">Send us message</a>
-                <i class="ri-arrow-right-up-line pl-1 group-hover:text-white"></i>
-              </div>
+
+             <button
+                onClick={sendToWhatsApp}
+                className="border border-gray-300 rounded-full w-fit py-2 px-3 hover:bg-[#25D366] hover:text-white cursor-pointer transition-all flex gap-2 items-center group"
+              >
+                <i className="ri-whatsapp-line md:text-lg text-sm text-[#25D366] group-hover:text-white"></i>
+
+                <span>Send us message</span>
+
+                <i className="ri-arrow-right-up-line pl-1 group-hover:text-white"></i>
+              </button>
+
             </div>
           </div>
 

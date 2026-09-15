@@ -1,4 +1,3 @@
-import Product from "./Product";
 import { ShirtData, JeansData ,TshirtData } from "../Data/TrendingData.js";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,10 +13,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const Trending = () => {
+const Trending = ({setProduct,selectedSizes,setSelectedSizes}) => {
   const [category, setCategory] = useState("All");
-  const [product, setProduct] = useState(false);
-const [selectedSizes, setSelectedSizes] = useState({});
   const allData = [...ShirtData, ...JeansData, ...TshirtData];
   const filterData =
     category === "All"
@@ -117,6 +114,7 @@ const [selectedSizes, setSelectedSizes] = useState({});
             <div className="w-full group">
               
               <Swiper
+                key={item.id}
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                 slidesPerView={1}
                 navigation
@@ -130,7 +128,7 @@ const [selectedSizes, setSelectedSizes] = useState({});
                 ))}
               </Swiper>
 
-              <div className="px-2">
+              <div className="px-2 pt-1">
 
                 <p className="md:text-[12px] text-[10px] text-gray-500">{item.name}</p>
 
@@ -167,7 +165,6 @@ const [selectedSizes, setSelectedSizes] = useState({});
         ))}
       </div>
 
-      {product && <Product product={product} setProduct={setProduct} size={selectedSizes[product.id]} />}
 
     </>
   );

@@ -429,7 +429,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <a href="#"><i class="ri-instagram-line text-2xl"></i></a>
+            <a href="#"><i className="ri-instagram-line text-2xl"></i></a>
           </div>
 
         </div>

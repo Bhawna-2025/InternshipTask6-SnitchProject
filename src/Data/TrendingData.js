@@ -151,7 +151,7 @@ const ShirtData = [
 
 const JeansData = [
   {
-    id: 1,
+    id: 11,
     category: "Jeans",
     name: "Washed Bootcut Jeans",
     price: 2099,
@@ -166,7 +166,7 @@ const JeansData = [
   },
 
   {
-    id: 2,
+    id: 12,
     category: "Jeans",
     name: "Straight Fit Stretch Washed Jeans",
     price: 2099,
@@ -181,7 +181,7 @@ const JeansData = [
   },
 
   {
-    id: 3,
+    id: 13,
     category: "Jeans",
     name: "6 Pocket Baggy Cargo Jeans",
     price: 1999,
@@ -196,7 +196,7 @@ const JeansData = [
   },
 
   {
-    id: 4,
+    id: 14,
     category: "Jeans",
     name: "Straight Fit Washed Jeans",
     price: 1999,
@@ -211,7 +211,7 @@ const JeansData = [
   },
 
   {
-    id: 5,
+    id: 15,
     category: "Jeans",
     name: "Washed Baggy Jeans",
     price: 1999,
@@ -226,7 +226,7 @@ const JeansData = [
   },
 
   {
-    id: 6,
+    id: 16,
     category: "Jeans",
     name: "Straight Fit Stretch Washed Jeans ",
     price: 2099,
@@ -241,7 +241,7 @@ const JeansData = [
   },
 
   {
-    id: 7,
+    id: 17,
     category: "Jeans",
     name: "Straight Fit Washed Jeans",
     price: 1999,
@@ -256,7 +256,7 @@ const JeansData = [
   },
 
   {
-    id: 8,
+    id: 18,
     category: "Jeans",
     name: "Knee Ripped Straight Fit Jeans",
     price: 1999,
@@ -271,7 +271,7 @@ const JeansData = [
   },
 
   {
-    id: 9,
+    id: 19,
     category: "Jeans",
     name: "Straight Fit Washed Jeans",
     price: 1999,
@@ -286,7 +286,7 @@ const JeansData = [
   },
 
   {
-    id: 10,
+    id: 20,
     category: "Jeans",
     name: "Straight Fit Washed Jeans",
     price: 1999,
@@ -303,7 +303,7 @@ const JeansData = [
 
 const TshirtData = [
   {
-    id: 1,
+    id: 21,
     category: "T-shirts",
     name: "Contrast Tipping Technical Polo T-Shirt",
     price: 1599,
@@ -317,7 +317,7 @@ const TshirtData = [
     ]
   },
   {
-    id: 2,
+    id: 22,
     category: "T-shirts",
     name: "Contrast Tipping Technical Polo T-Shirt",
     price: 1599,
@@ -331,7 +331,7 @@ const TshirtData = [
     ]
   },
   {
-    id: 3,
+    id: 23,
     category: "T-shirts",
     name: "Contrast Tipping Technical Polo T-Shirt",
     price: 1599,
@@ -345,7 +345,7 @@ const TshirtData = [
     ]
   },
   {
-    id: 4,
+    id: 24,
     category: "T-shirts",
     name: "Contrast Tipping Technical Polo T-Shirt",
     price: 1599,
@@ -359,7 +359,7 @@ const TshirtData = [
     ]
   },
   {
-    id: 5,
+    id: 25,
     category: "T-shirts",
     name: "Contrast Tipping Technical Polo T-Shirt",
     price:  1599,
@@ -373,7 +373,7 @@ const TshirtData = [
     ]
   },
   {
-    id: 6,
+    id: 26,
     category: "T-shirts",
     name: "Flat Knit Stripes Zipper Polo T-Shirt",
     price: 1499,
@@ -387,7 +387,7 @@ const TshirtData = [
     ]
   },
   {
-    id: 7,
+    id: 27,
     category: "T-shirts",
     name: "Good Times Roll Cropped T-Shirt",
     price: 1199,
@@ -401,7 +401,7 @@ const TshirtData = [
     ]
   },
   {
-    id: 8,
+    id: 28,
     category: "T-shirts",
     name: "Rebel Bunny Oversized T-Shirt",
     price: 1199,
@@ -415,7 +415,7 @@ const TshirtData = [
     ]
   },
   {
-    id: 9,
+    id: 29,
     category: "T-shirts",
     name: "Gameday Tour Sleeveles T-Shirt",
     price: 1099,
@@ -429,7 +429,7 @@ const TshirtData = [
     ]
   },
   {
-    id: 10,
+    id: 30,
     category: "T-shirts",
     name: "Silver Green Oversized T-Shirt",
     price: 999,
@@ -444,5 +444,43 @@ const TshirtData = [
   },
 ]
 
-export { ShirtData, JeansData ,TshirtData};
+const newArrivalData = [
+
+  {
+   id:31,
+   isNew:true,
+   category:"Shirts",
+   name:"Box Fit Botanical Print Shirt",
+   price:1199,
+   size:['XS','S','M','L'],
+   images:[
+     "/NewArrivalImages/Shirt/image1.webp",
+     "/NewArrivalImages/Shirt/image2.webp",
+     "/NewArrivalImages/Shirt/image3.webp",
+     "/NewArrivalImages/Shirt/image4.webp",
+     "/NewArrivalImages/Shirt/image5.webp",
+   ],
+  },
+
+  {
+    id:32,
+    isNew:true,
+    category:"Jeans",
+    name:"Straight Fit Washed Jeans",
+    price:1999,
+    size:[28,30,32,34,36,38],
+    images:[
+      "/NewArrivalImages/jeans/image1.webp",
+      "/NewArrivalImages/jeans/image2.webp",
+      "/NewArrivalImages/jeans/image3.webp",
+      "/NewArrivalImages/jeans/image4.webp",
+      "/NewArrivalImages/jeans/image5.webp",
+    ],
+   },
+  
+
+]
+
+export { ShirtData, JeansData ,TshirtData,newArrivalData};
+
 

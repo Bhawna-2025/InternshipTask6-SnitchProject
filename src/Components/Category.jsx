@@ -11,7 +11,7 @@ const Category = () => {
         <>
 
             <div className='mt-5 md:pl-20'>
-                <p className='md:text-4xl text-2xl font-[200]'>SHOP BY</p>
+                <p className='md:text-4xl text-2xl font-[250]'>SHOP BY</p>
                 <p className='md:text-4xl text-2xl font-bold'>CATEGORY</p>
                 <div className="h-[3px] w-80 bg-amber-600 mt-3"></div>
             </div>
