@@ -34,7 +34,7 @@ const categoryData = [
 
 ]
 
-const Category = ({category,setCategory}) => {
+const Category = ({setCategory}) => {
 
     return (
         <>
@@ -60,7 +60,7 @@ const Category = ({category,setCategory}) => {
                 {categoryData.map((item, index) => (
 
                     <SwiperSlide key={index} className='h-full w-full' >
-                        <a href="#trending" onClick={(e)=>{
+                        <a href="#trending" onClick={()=>{
                             // e.preventDefault();
                             setCategory(item.category);
                             // document.getElementById("trending")?.scrollIntoView({ behavior: "smooth" });

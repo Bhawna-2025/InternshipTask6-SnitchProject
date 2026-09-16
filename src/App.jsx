@@ -20,7 +20,11 @@ const App = () => {
 
   return (
     <>
-      <Nav openSearch={openSearch} setOpenSearch={setOpenSearch} setOpenMenuBar={setOpenMenuBar}/>
+      <Nav 
+      openSearch={openSearch} 
+      setOpenSearch={setOpenSearch} 
+      setOpenMenuBar={setOpenMenuBar}
+      />
 
       {openMenuBar && <SideBarMenu
         setOpenMenuBar={setOpenMenuBar} 
