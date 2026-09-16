@@ -16,6 +16,7 @@ const App = () => {
   const [selectedSizes, setSelectedSizes] = useState({});
   const [openSearch, setOpenSearch] = useState(false);
   const [openMenuBar, setOpenMenuBar] = useState(false)
+  const [category, setCategory] = useState("All");
 
   return (
     <>
@@ -41,7 +42,9 @@ const App = () => {
       ) : (
         <div className="md:mx-30 mx-5">
           <Banner />
-          <Category />
+          <Category 
+          category={category} 
+          setCategory={setCategory}/>
           <AdBanner />
           <Crousel />
           {/* <PriceTags/> */}
@@ -54,8 +57,10 @@ const App = () => {
             setProduct={setProduct}
             selectedSizes={selectedSizes}
             setSelectedSizes={setSelectedSizes}
+            category={category}
+            setCategory={setCategory}
           />
-          <Footer />
+          <Footer setCategory={setCategory}/>
         </div>
       )}
 

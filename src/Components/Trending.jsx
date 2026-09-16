@@ -13,8 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const Trending = ({setProduct,selectedSizes,setSelectedSizes}) => {
-  const [category, setCategory] = useState("All");
+const Trending = ({setProduct,selectedSizes,setSelectedSizes,setCategory,category}) => {
   const allData = [...ShirtData, ...JeansData, ...TshirtData];
   const filterData =
     category === "All"
@@ -23,7 +22,7 @@ const Trending = ({setProduct,selectedSizes,setSelectedSizes}) => {
 
   return (
     <>
-      <div className="w-full pb-10 ">
+      <div id="trending" className="w-full pb-10 ">
         <h1 className="md:text-3xl font-bold uppercase">Trending</h1>
         <div className="flex justify-start items-center uppercase md:gap-5 gap-[10px] md:text-[12px] text-[10px]  mt-3">
           <a
@@ -107,12 +106,9 @@ const Trending = ({setProduct,selectedSizes,setSelectedSizes}) => {
             key={item.id}
             onClick={(e) => {
               e.preventDefault();
-             
-             
             }}
           >
             <div className="w-full group">
-              
               <Swiper
                 key={item.id}
                 modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -164,8 +160,6 @@ const Trending = ({setProduct,selectedSizes,setSelectedSizes}) => {
           </a>
         ))}
       </div>
-
-
     </>
   );
 };

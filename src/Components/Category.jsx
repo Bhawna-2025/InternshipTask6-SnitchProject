@@ -5,8 +5,37 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
+const categoryData = [
+    {
+        category:"Jeans",
+        image: "/CategoryImages/Category_cargoImage.webp"
+    },
+    {
+        category:"Jeans",
+        image: "/CategoryImages/Category_jeansImage.webp"
+    },
+    {
+        category:"T-shirts",
+        image: "/CategoryImages/Category_tshirtImage.webp"
+    },
+    {
+        category:"Trousers",
+        image: "/CategoryImages/Category_TrouserImage.webp"
+    },
+    {
+        
+        category:"Shirts",
+        image: "/CategoryImages/Catogary_ShirtImage.webp"
+    },
+    {
+        category:"T-shirts",
+        image: "/CategoryImages/Category_poloImage.webp"
+    },
 
-const Category = () => {
+]
+
+const Category = ({category,setCategory}) => {
+
     return (
         <>
 
@@ -28,41 +57,19 @@ const Category = () => {
                 speed={800}
                 className='h-full w-full mt-2'
             >
-                <SwiperSlide className='h-full w-full' >
-                    <a href="#">
-                        <img src="/CategoryImages/Category_cargoImage.webp" alt="" className='h-full w-full object-contain' />
-                    </a>
-                </SwiperSlide>
+                {categoryData.map((item, index) => (
 
-                <SwiperSlide className='h-full w-full'>
-                    <a href="#">
-                        <img src="/CategoryImages/Category_jeansImage.webp" alt="" className='h-full w-full object-contain ' />
-                    </a>
-                </SwiperSlide>
+                    <SwiperSlide key={index} className='h-full w-full' >
+                        <a href="#trending" onClick={(e)=>{
+                            // e.preventDefault();
+                            setCategory(item.category);
+                            // document.getElementById("trending")?.scrollIntoView({ behavior: "smooth" });
+                        }}>
+                            <img src={item.image} alt="" className='h-full w-full object-contain transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer ' />
+                        </a>
+                    </SwiperSlide>
 
-                <SwiperSlide className='h-full w-full'>
-                    <a href="#">
-                        <img src="/CategoryImages/Category_tshirtImage.webp" alt="" className='h-full w-full object-contain' />
-                    </a>
-                </SwiperSlide>
-
-                <SwiperSlide className='h-full w-full'>
-                    <a href="#">
-                        <img src="/CategoryImages/Category_TrouserImage.webp" alt="" className='h-full w-full object-contain' />
-                    </a>
-                </SwiperSlide>
-
-                <SwiperSlide className='h-full w-full'>
-                    <a href="#">
-                        <img src="/CategoryImages/Catogary_ShirtImage.webp" alt="" className='h-full w-full object-contain' />
-                    </a>
-                </SwiperSlide>
-
-                <SwiperSlide className='h-full w-full'>
-                    <a href="#">
-                        <img src="/CategoryImages/Category_poloImage.webp" alt="" className='h-full w-full object-contain' />
-                    </a>
-                </SwiperSlide>
+                ))}
 
             </Swiper>
 
