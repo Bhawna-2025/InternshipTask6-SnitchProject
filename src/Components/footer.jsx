@@ -244,7 +244,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
+{/* 
       <div>
         <h2 className="font-bold text-xs uppercase mb-2">
           MOST POPULAR ACCESSORIES
@@ -369,9 +369,9 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div>
+      {/* <div>
         <h2 className="text-xl font-medium">The SNITCH Shopping Experience - Where Digital Meets Style</h2>
         <p className="text-[12px] text-gray-800">
           At SNITCH, we redefine the modern shopping experience, merging
@@ -386,7 +386,7 @@ const Footer = () => {
           collections. From effortless online browsing to hands-on in-store
           exploration, SNITCH lets you shop on your terms, at your pace.
         </p>
-      </div>
+      </div> */}
 
       <div>
 
