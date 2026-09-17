@@ -25,15 +25,15 @@ const Contact = () => {
           </button>
         </a>
         <div className="mt-15 flex flex-col gap-5">
-          <h1 className="text-center text-3xl font-bold text-neutral-800">
+          <h1 className="text-center md:text-3xl text-2xl font-bold text-neutral-800">
             CONTACT US
           </h1>
-          <p className="text-center text-gray-500 hover:text-black cursor-pointer">
+          <p className="text-center text-gray-500 hover:text-black cursor-pointer md:text-lg text-sm ">
             Address : Snitch, 123, Main Street, New Delhi, 110001
           </p>
-          <div className="flex items-center justify-center gap-10">
+          <div className="flex items-center justify-center md:gap-10 gap-5">
             <a href="#">
-              <div className="my-2 flex items-center gap-2">
+              <div className="my-2 flex items-center gap-2 ">
                 <i className="ri-instagram-line text-2xl bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent"></i>
                 <span className="md:text-[12px] text-[10px] text-gray-500 hover:text-black cursor-pointer">
                   Follow us on instagram
