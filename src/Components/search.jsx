@@ -11,14 +11,14 @@ const Search = ({ search, setSearch, openSearch, setOpenSearch }) => {
 
   return (
     <>
-      <div
+      {/* <div
         className={`fixed inset-0 bg-black/40 z-30 transition-opacity duration-300 ${
           openSearch
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setOpenSearch(false)}
-      />
+      /> */}
 
       <div
         className={`fixed top-20 left-0 w-full bg-white z-40 transition-transform duration-300 ease-in-out ${
