@@ -5,7 +5,6 @@ import {
   TshirtData,
   newArrivalData,
 } from "../Data/TrendingData.js";
-import Search from "./search.jsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
@@ -20,13 +19,11 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const SearchResult = ({
+  search,
   selectedSizes,
   setSelectedSizes,
-  setProduct,
-  setOpenSearch,
-  openSearch,
+  setProduct
 }) => {
-  const [search, setSearch] = useState("");
   const allData = [
     ...newArrivalData,
     ...ShirtData,
@@ -76,12 +73,7 @@ const SearchResult = ({
 
   return (
     <>
-      <Search
-        search={search}
-        setSearch={setSearch}
-        setOpenSearch={setOpenSearch}
-        openSearch={openSearch}
-      />
+     
       {/* if nothing found then this will render */}
       {filterData.length === 0 ? (
         <div className="w-full text-center py-20 mt-40">

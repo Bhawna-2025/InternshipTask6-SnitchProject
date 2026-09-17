@@ -12,15 +12,29 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const SideBarMenu = ({ setOpenMenuBar , selectedSizes , setSelectedSizes , setProduct}) => {
+const SideBarMenu = ({ setOpenMenuBar , selectedSizes , setSelectedSizes , setProduct,openMenuBar}) => {
   return (
-    <div className="z-100 fixed top-0 left-0 h-screen overflow-y-auto no-scrollbar backdrop-blur-2xl w-90 pb-10 bg-white/95 shadow-2xl">
-      <div className="w-full flex justify-end p-5 ">
-        <i
-          className="ri-close-line text-2xl text-black cursor-pointer hover:opacity-70 transition-opacity "
-          onClick={() => setOpenMenuBar(false)}
-        ></i>
-      </div>
+    <>
+      {/* Overlay Backdrop */}
+      <div
+        className={`fixed inset-0 bg-black/40 z-40 transition-opacity duration-300 ${
+          openMenuBar ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setOpenMenuBar(false)}
+      />
+
+      {/* Sidebar Menu */}
+      <div
+        className={`z-50 fixed top-0 left-0 h-screen overflow-y-auto no-scrollbar w-90 pb-10 bg-white shadow-2xl transition-transform duration-400 ease-in-out transform ${
+          openMenuBar ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="w-full flex justify-end p-5 ">
+          <i
+            className="ri-close-line text-2xl text-black cursor-pointer hover:opacity-70 transition-opacity "
+            onClick={() => setOpenMenuBar(false)}
+          ></i>
+        </div>
       <div>
         <p className="text-2xl text-center uppercase font-bold mb-4">New Arrivals</p>
       </div>
@@ -33,8 +47,6 @@ const SideBarMenu = ({ setOpenMenuBar , selectedSizes , setSelectedSizes , setPr
             key={item.id}
             onClick={(e) => {
               e.preventDefault();
-             
-             
             }}
           >
             <div className="w-full group relative">
@@ -54,7 +66,7 @@ const SideBarMenu = ({ setOpenMenuBar , selectedSizes , setSelectedSizes , setPr
                 ))}
               </Swiper>
                <span className="absolute top-2 right-2 bg-white px-2 py-1 text-[10px] text-red-500 border border-gray-300 z-10 font-bold">NEW</span> 
-
+     
               <div className="px-2 pt-1">
 
                 <p className="md:text-[12px] text-[10px] text-gray-500">{item.name}</p>
@@ -91,7 +103,8 @@ const SideBarMenu = ({ setOpenMenuBar , selectedSizes , setSelectedSizes , setPr
           </a>
         ))}
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

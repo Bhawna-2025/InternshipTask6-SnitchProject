@@ -11,62 +11,70 @@ import Product from "./Components/Product";
 import SearchResult from "./Components/SearchResult";
 import SideBarMenu from "./Components/SideBarMenu";
 import NewArrival from "./Components/NewArrival";
+import Search from "./Components/search";
 const App = () => {
   const [product, setProduct] = useState(false);
   const [selectedSizes, setSelectedSizes] = useState({});
   const [openSearch, setOpenSearch] = useState(false);
-  const [openMenuBar, setOpenMenuBar] = useState(false)
+  const [search, setSearch] = useState("");
+  const [openMenuBar, setOpenMenuBar] = useState(false);
   const [category, setCategory] = useState("All");
 
   return (
     <>
-      <Nav 
-      openSearch={openSearch} 
-      setOpenSearch={setOpenSearch} 
-      setOpenMenuBar={setOpenMenuBar}
+      <Nav
+        openSearch={openSearch}
+        setOpenSearch={setOpenSearch}
+        setOpenMenuBar={setOpenMenuBar}
       />
 
-      {openMenuBar && <SideBarMenu
-        setOpenMenuBar={setOpenMenuBar} 
+      <SideBarMenu
+        openMenuBar={openMenuBar}
+        setOpenMenuBar={setOpenMenuBar}
         selectedSizes={selectedSizes}
         setSelectedSizes={setSelectedSizes}
         setProduct={setProduct}
-        />}
+      />
 
-      {openSearch ? (
-        <div className="md:mx-30 mx-5">
-          <SearchResult
-            setProduct={setProduct}
-            selectedSizes={selectedSizes}
-            setSelectedSizes={setSelectedSizes}
-            setOpenSearch={setOpenSearch}
-            openSearch={openSearch}
-          />
-        </div>
-      ) : (
-        <div className="md:mx-30 mx-5">
-          <Banner />
-          <Category 
-          category={category} 
-          setCategory={setCategory}/>
-          <AdBanner />
-          <Crousel />
-          {/* <PriceTags/> */}
-          <NewArrival 
-           setProduct={setProduct}
-            selectedSizes={selectedSizes}
-            setSelectedSizes={setSelectedSizes}
-            />
-          <Trending
-            setProduct={setProduct}
-            selectedSizes={selectedSizes}
-            setSelectedSizes={setSelectedSizes}
-            category={category}
-            setCategory={setCategory}
-          />
-          <Footer setCategory={setCategory}/>
-        </div>
-      )}
+      <Search
+        search={search}
+        setSearch={setSearch}
+        setOpenSearch={setOpenSearch}
+        openSearch={openSearch}
+      />
+
+      <div className={`md:mx-30 mx-5 ${openSearch ? "block" : "hidden"}`}>
+        <SearchResult
+          search={search}
+          setSearch={setSearch}
+          setProduct={setProduct}
+          selectedSizes={selectedSizes}
+          setSelectedSizes={setSelectedSizes}
+          setOpenSearch={setOpenSearch}
+          openSearch={openSearch}
+        />
+      </div>
+
+      <div className={`md:mx-30 mx-5 ${openSearch ? "hidden" : "block"}`}>
+        <Banner />
+        <Category category={category} setCategory={setCategory} />
+        <AdBanner />
+        <Crousel />
+        {/* <PriceTags/> */}
+        <NewArrival
+          setProduct={setProduct}
+          selectedSizes={selectedSizes}
+          setSelectedSizes={setSelectedSizes}
+        />
+        <Trending
+          setProduct={setProduct}
+          selectedSizes={selectedSizes}
+          setSelectedSizes={setSelectedSizes}
+          category={category}
+          setCategory={setCategory}
+        />
+        <Footer setCategory={setCategory} />
+      </div>
 
       {product && (
         <Product
