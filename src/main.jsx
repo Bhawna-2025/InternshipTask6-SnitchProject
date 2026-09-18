@@ -5,10 +5,12 @@ import './index.css'
 import App from './App.jsx'
 import Contact from "./pages/Contact"
 import AboutUs from "./pages/AboutUs"
+import ScrollToTop from "./Components/ScrollToTop.jsx"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/contact" element={<Contact />} />

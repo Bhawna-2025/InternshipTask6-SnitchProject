@@ -6,10 +6,10 @@ const AboutUs = () => {
   return (
     <div>
       <Nav />
-      <div className="md:pt-10 pt-5 md:pb-10 md:mx-30 mx-5">
+      <div className="pt-24 md:pb-10 md:mx-30 mx-5">
         <Link
           to="/"
-          className="text-gray-500 hover:text-black cursor-pointer md:ml-25 ml-15 md:mt-20 mt-5 inline-block"
+          className="text-gray-500 hover:text-black cursor-pointer md:mx-20 inline-block"
         >
           <button className=" flex gap-2 items-center">
             <i className="ri-arrow-left-line"></i>
