@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Nav from "../Components/Nav";
 import Footer from "../Components/footer";
 
@@ -18,12 +19,12 @@ const Contact = () => {
     <div>
       <Nav />
       <div className="pt-24 pb-20 md:mx-30 mx-5 h-140">
-        <a href="/" className="text-gray-500 hover:text-black cursor-pointer ">
+        <Link to="/" className="text-gray-500 hover:text-black cursor-pointer inline-block">
           <button className=" flex gap-2 items-center">
             <i className="ri-arrow-left-line"></i>
             <span>Back to home</span>
           </button>
-        </a>
+        </Link>
         <div className="mt-15 flex flex-col gap-5">
           <h1 className="text-center md:text-3xl text-2xl font-bold text-neutral-800">
             CONTACT US

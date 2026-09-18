@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Nav from "../Components/Nav";
 import Footer from "../Components/footer";
 
@@ -5,16 +6,16 @@ const AboutUs = () => {
   return (
     <div>
       <Nav />
-      <div className="md:pt-24 pt-20 md:pb-10 md:mx-30 mx-5">
-        <a
-          href="/"
-          className="text-gray-500 hover:text-black cursor-pointer md:ml-25 ml-15 md:mt-20 mt-5"
+      <div className="md:pt-10 pt-5 md:pb-10 md:mx-30 mx-5">
+        <Link
+          to="/"
+          className="text-gray-500 hover:text-black cursor-pointer md:ml-25 ml-15 md:mt-20 mt-5 inline-block"
         >
           <button className=" flex gap-2 items-center">
             <i className="ri-arrow-left-line"></i>
             <span>Back to home</span>
           </button>
-        </a>
+        </Link>
         <h1 className="text-center text-3xl font-bold text-neutral-800 pt-3">
           ABOUT US
         </h1>

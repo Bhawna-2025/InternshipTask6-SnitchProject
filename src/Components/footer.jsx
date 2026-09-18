@@ -1,4 +1,6 @@
 
+import { Link } from "react-router-dom";
+
 const Footer = ({setCategory}) => {
   return (
     <div className="mt-15 bg-[#F8F1E9] text-black w-full min-h-[50vh] py-10 px-10 flex flex-col gap-8 ">
@@ -275,11 +277,11 @@ const Footer = ({setCategory}) => {
 
           <div className="flex md:flex-row flex-col md:justify-center md:items-center md:gap-10 gap-4">
             
-            <a href="/about">
+            <Link to="/about">
               <p className="text-[12px] text-gray-800">
                 About Us
               </p>
-            </a>
+            </Link>
 
             <a href="#">
               <p className="text-[12px] text-gray-800">
@@ -299,11 +301,11 @@ const Footer = ({setCategory}) => {
               </p>
             </a>
 
-            <a href="/contact">
+            <Link to="/contact">
               <p className="text-[12px] text-gray-800">
                 Contact Us
               </p>
-            </a>
+            </Link>
           </div>
 
           <div>
