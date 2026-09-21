@@ -38,7 +38,6 @@ const Category = ({setCategory}) => {
 
     return (
         <>
-
             <div className='mt-5 md:pl-20'>
                 <p className='md:text-4xl text-2xl font-[250]'>SHOP BY</p>
                 <p className='md:text-4xl text-2xl font-bold'>CATEGORY</p>
